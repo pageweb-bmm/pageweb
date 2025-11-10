@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aide - Windows & Chrome (Pour Grand‑père)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <h1>🧓 Aide simple pour Windows & Chrome</h1>
+      <p class="subtitle">Raccourcis, explications et dépannage — conçu pour être clair et facile à utiliser.</p>
+      <div class="search-row">
+        <input id="search" type="search" placeholder="Rechercher un raccourci ou une action (ex: Copier, Alt+Tab, Favoris)"/>
+        <button id="clear">Effacer</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav class="categories">
+      <button class="cat-btn" data-cat="windows">🪟 Windows</button>
+      <button class="cat-btn" data-cat="chrome">🌐 Google Chrome</button>
+      <button class="cat-btn" data-cat="mouse-keyboard">🖱️ Souris & Clavier</button>
+      <button class="cat-btn" data-cat="files">📁 Fichiers & Bureau</button>
+      <button class="cat-btn" data-cat="internet">📶 Internet & Réseaux</button>
+      <button class="cat-btn" data-cat="troubleshoot">🧰 Dépannage</button>
+      <button class="cat-btn" data-cat="howto">💡 Comment faire...</button>
+      <button class="cat-btn" data-cat="tips">✨ Astuces</button>
+      <button class="cat-btn" data-cat="all">Afficher tout</button>
+    </nav>
+
+    <section id="results" class="cards">
+      <!-- Cards will be injected here -->
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>Fichier local — simple à héberger (GitHub Pages / Netlify). Si besoin, tu peux me demander d'héberger ou d'améliorer.</p>
+    <p>Version générée automatiquement — modifie librement les textes dans <code>index.html</code>.</p>
+  </footer>
+
+  <template id="card-template">
+    <article class="card">
+      <h3 class="card-title"></h3>
+      <div class="card-meta"></div>
+      <p class="card-desc"></p>
+      <details class="card-details">
+        <summary>Plus d'infos</summary>
+        <div class="more"></div>
+      </details>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>

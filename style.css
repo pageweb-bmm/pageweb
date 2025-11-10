@@ -1,0 +1,62 @@
+:root{
+  --bg: #fbfdff;
+  --card: #ffffff;
+  --accent: #2563eb;
+  --muted: #55595c;
+  --good: #0a7a3b;
+  --danger: #b00020;
+  font-synthesis: none;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.topbar{
+  background:linear-gradient(90deg, #eaf2ff, #ffffff);
+  border-bottom:1px solid #e6eefb;
+  padding:28px 0 18px;
+}
+.topbar h1{
+  margin:0;
+  font-size:28px;
+  color:var(--accent);
+}
+.subtitle{margin:6px 0 12px;color:#334155}
+.search-row{display:flex;gap:8px;align-items:center;margin-top:10px}
+.search-row input[type=search]{
+  flex:1;padding:12px 14px;border-radius:10px;border:1px solid #dbe7ff;font-size:16px;
+  box-shadow:inset 0 1px 0 rgba(0,0,0,0.02);
+}
+.search-row button{
+  padding:10px 14px;border-radius:10px;border:none;background:var(--accent);color:white;font-weight:600;
+  cursor:pointer;
+}
+.categories{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.cat-btn{
+  padding:10px 12px;border-radius:10px;border:1px solid #dfe6f8;background:white;cursor:pointer;font-weight:600;
+}
+.cat-btn[data-cat="all"]{background:var(--accent);color:white;border:none}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:32px}
+.card{
+  background:var(--card);padding:14px;border-radius:12px;border:1px solid #eef4ff;
+  box-shadow:0 6px 18px rgba(22,38,99,0.04);
+}
+.card-title{margin:0 0 6px;color:#0f172a;font-size:18px}
+.card-meta{font-size:13px;color:#64748b;margin-bottom:8px}
+.card-desc{margin:0 0 8px;line-height:1.45}
+.card-details summary{cursor:pointer;color:var(--accent);font-weight:600}
+.more{margin-top:8px;font-size:14px;color:#334155}
+kbd{background:#f1f5f9;border:1px solid #e2e8f0;border-bottom-width:3px;padding:3px 6px;border-radius:6px;font-family:monospace}
+
+.footer{padding:18px 0;color:#475569;border-top:1px solid #e6eefb;font-size:14px;text-align:center}
+@media (max-width:640px){
+  .topbar h1{font-size:20px}
+  .search-row input{font-size:15px}
+}
